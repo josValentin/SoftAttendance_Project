@@ -17,7 +17,15 @@ namespace SoftAttendanceProject.Presentacion
         {
             InitializeComponent();
         }
-        int Idcargo;
+        int Idcargo = 0;
+        int desde = 1;
+        int hasta = 10;
+        int contador;
+        int Idpersonal;
+        private int items_por_pagina = 10;
+        string Estado;
+        int totalPaginas;
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             LocalicarDtvCargos();
@@ -49,8 +57,40 @@ namespace SoftAttendanceProject.Presentacion
 
         private void btnGuardarPersonal_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtNombres.Text))
+            {
+                if (!string.IsNullOrEmpty(txtIdentificacion.Text))
+                {
+                    if (!string.IsNullOrEmpty(cbxPais.Text))
+                    {
+                        if(Idcargo > 0)
+                        {
+                            if (!string.IsNullOrEmpty(txtSueldoHora.Text))
+                            {
+                                Insertar_Personal();
+                            }
+                        }
+                    }
+                }
+            }
         }
+
+        private void MostrarPersonal()
+        {
+            DataTable dt = new DataTable();
+            Dpersonal funcion = new Dpersonal();
+            funcion.MostrarPersonal(ref dt, desde, hasta);
+            dataListadoPersonal.DataSource = dt;
+            DiseñarDtvPersonal();
+        }
+        private void DiseñarDtvPersonal()
+        {
+            Bases.DiseñoDtv(ref dataListadoPersonal);
+            PanelPaginado.Visible = true;
+            dataListadoPersonal.Columns[2].Visible = false;
+            dataListadoPersonal.Columns[7].Visible = false;
+        }
+
         private void Insertar_Personal()
         {
             Lpersonal parametros = new Lpersonal();
@@ -58,7 +98,14 @@ namespace SoftAttendanceProject.Presentacion
             parametros.Nombres = txtNombres.Text;
             parametros.Identificacion = txtIdentificacion.Text;
             parametros.Pais = cbxPais.Text;
-
+            parametros.Id_cargo = Idcargo;
+            parametros.SueldoPorHora = Convert.ToDouble(txtSueldoHora.Text);
+            if(funcion.InsertarPersonal(parametros)== true)
+            {
+                MostrarPersonal();
+                PanelRegistros.Visible = false;
+            }
+            
         }
 
         private void InsertarCargos()
@@ -85,7 +132,7 @@ namespace SoftAttendanceProject.Presentacion
             }
             else
             {
-                MessageBox.Show("Agregue el Cargo" , "Falta el Cargo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Agregue el Cargo", "Falta el Cargo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -135,13 +182,13 @@ namespace SoftAttendanceProject.Presentacion
 
         private void dataListadoCargos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == dataListadoCargos.Columns["EditarC"].Index)
+            if (e.ColumnIndex == dataListadoCargos.Columns["EditarC"].Index)
             {
                 ObtenerCargosEditar();
             }
-            if(e.ColumnIndex == dataListadoCargos.Columns["Cargo"].Index)
+            if (e.ColumnIndex == dataListadoCargos.Columns["Cargo"].Index)
             {
-
+                ObtenerDatosCargos();
             }
         }
 
@@ -200,7 +247,7 @@ namespace SoftAttendanceProject.Presentacion
 
         private void Personal_Load(object sender, EventArgs e)
         {
-
+            MostrarPersonal();
         }
     }
 }
