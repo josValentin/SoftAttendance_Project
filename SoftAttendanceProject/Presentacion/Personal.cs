@@ -249,5 +249,66 @@ namespace SoftAttendanceProject.Presentacion
         {
             MostrarPersonal();
         }
+
+        private void dataListadoPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == dataListadoPersonal.Columns["Eliminar"].Index)
+            {
+                DialogResult result = MessageBox.Show("Solo se cambiará el Estado para que no se pueda acceder, ¿desea continuar?", "Eliminando registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
+                {
+                    EliminarPersonal();
+                }
+            }
+            if(e.ColumnIndex == dataListadoPersonal.Columns["Editar"].Index)
+            {
+                ObtenerDatos();
+            }
+        }
+        private void ObtenerDatos()
+        {
+            Idpersonal = Convert.ToInt32(dataListadoPersonal.SelectedCells[2].Value);
+            Estado = dataListadoPersonal.SelectedCells[8].Value.ToString();
+            if(Estado == "ELIMINADO")
+            {
+                restaurar_personal();
+            }
+            else
+            {
+                txtNombres.Text = dataListadoPersonal.SelectedCells[3].Value.ToString();
+                txtIdentificacion.Text = dataListadoPersonal.SelectedCells[4].Value.ToString();
+                cbxPais.Text = dataListadoPersonal.SelectedCells[10].Value.ToString();
+                txtCargo.Text = dataListadoPersonal.SelectedCells[6].Value.ToString();
+                Idcargo = Convert.ToInt32(dataListadoPersonal.SelectedCells[7].Value);
+                txtSueldoHora.Text = dataListadoPersonal.SelectedCells[5].Value.ToString();
+
+                PanelPaginado.Visible = false;
+                PanelRegistros.Visible = true;
+                PanelRegistros.Dock = DockStyle.Fill;
+                dataListadoCargos.Visible = false;
+                lblSueldo.Visible = true;
+                PanelBtnguardarPer.Visible = true;
+                btnGuardarPersonal.Visible = false;
+                btnGuardarCambiosPersonal.Visible = true;
+                PanelCargos.Visible = false;
+            }
+        }
+
+        private void restaurar_personal()
+        {
+
+        }
+
+        private void EliminarPersonal()
+        {
+            Idpersonal = Convert.ToInt32(dataListadoPersonal.SelectedCells[2].Value);
+            Lpersonal parametros = new Lpersonal();
+            Dpersonal funcion = new Dpersonal();
+            parametros.Id_personal = Idpersonal;
+            if(funcion.eliminarPersonal(parametros) == true)
+            {
+                MostrarPersonal();
+            }
+        }
     }
 }

@@ -34,9 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataListadoPersonal = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.PanelPaginado = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -48,15 +52,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.PanelRegistros = new System.Windows.Forms.Panel();
             this.dataListadoCargos = new System.Windows.Forms.DataGridView();
+            this.EditarC = new System.Windows.Forms.DataGridViewImageColumn();
             this.PanelCargos = new System.Windows.Forms.Panel();
+            this.btnVolverCargos = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnGuardarC = new System.Windows.Forms.Button();
+            this.btnGuardarCambioC = new System.Windows.Forms.Button();
             this.txtCargoG = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSueldoG = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.btnVolverPersonal = new System.Windows.Forms.Button();
             this.PanelBtnguardarPer = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnGuardarPersonal = new System.Windows.Forms.Button();
+            this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
             this.btnAgregarCargo = new System.Windows.Forms.Button();
             this.cbxPais = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -75,18 +86,8 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnVolverCargos = new System.Windows.Forms.Button();
-            this.btnGuardarC = new System.Windows.Forms.Button();
-            this.btnGuardarCambioC = new System.Windows.Forms.Button();
-            this.btnVolverPersonal = new System.Windows.Forms.Button();
-            this.btnGuardarPersonal = new System.Windows.Forms.Button();
-            this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.EditarC = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoPersonal)).BeginInit();
             this.PanelPaginado.SuspendLayout();
             this.PanelRegistros.SuspendLayout();
@@ -94,7 +95,6 @@
             this.PanelCargos.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.PanelBtnguardarPer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,6 +125,33 @@
             this.button6.TabIndex = 14;
             this.button6.Text = "Mostrar todos";
             this.button6.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnAgregar.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.mas;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Location = new System.Drawing.Point(925, 0);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(68, 66);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SoftAttendanceProject.Properties.Resources.buscar__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(295, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -181,6 +208,7 @@
             this.dataListadoPersonal.Location = new System.Drawing.Point(0, 66);
             this.dataListadoPersonal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataListadoPersonal.Name = "dataListadoPersonal";
+            this.dataListadoPersonal.ReadOnly = true;
             this.dataListadoPersonal.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             this.dataListadoPersonal.RowsDefaultCellStyle = dataGridViewCellStyle4;
@@ -193,6 +221,23 @@
             this.dataListadoPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListadoPersonal.Size = new System.Drawing.Size(993, 393);
             this.dataListadoPersonal.TabIndex = 1;
+            this.dataListadoPersonal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoPersonal_CellClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "";
+            this.Eliminar.Image = global::SoftAttendanceProject.Properties.Resources.X;
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "";
+            this.Editar.Image = global::SoftAttendanceProject.Properties.Resources.pencil;
+            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
             // 
             // PanelPaginado
             // 
@@ -360,6 +405,7 @@
             this.dataListadoCargos.Location = new System.Drawing.Point(407, 261);
             this.dataListadoCargos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataListadoCargos.Name = "dataListadoCargos";
+            this.dataListadoCargos.ReadOnly = true;
             this.dataListadoCargos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.dataListadoCargos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataListadoCargos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
@@ -370,6 +416,14 @@
             this.dataListadoCargos.Size = new System.Drawing.Size(325, 82);
             this.dataListadoCargos.TabIndex = 17;
             this.dataListadoCargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoCargos_CellClick);
+            // 
+            // EditarC
+            // 
+            this.EditarC.HeaderText = "";
+            this.EditarC.Image = global::SoftAttendanceProject.Properties.Resources.pencil;
+            this.EditarC.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.EditarC.Name = "EditarC";
+            this.EditarC.ReadOnly = true;
             // 
             // PanelCargos
             // 
@@ -387,6 +441,24 @@
             this.PanelCargos.Size = new System.Drawing.Size(420, 190);
             this.PanelCargos.TabIndex = 16;
             // 
+            // btnVolverCargos
+            // 
+            this.btnVolverCargos.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.back;
+            this.btnVolverCargos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolverCargos.FlatAppearance.BorderSize = 0;
+            this.btnVolverCargos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverCargos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverCargos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverCargos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverCargos.ForeColor = System.Drawing.Color.White;
+            this.btnVolverCargos.Location = new System.Drawing.Point(345, 126);
+            this.btnVolverCargos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolverCargos.Name = "btnVolverCargos";
+            this.btnVolverCargos.Size = new System.Drawing.Size(44, 30);
+            this.btnVolverCargos.TabIndex = 16;
+            this.btnVolverCargos.UseVisualStyleBackColor = true;
+            this.btnVolverCargos.Click += new System.EventHandler(this.btnVolverCargos_Click);
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnGuardarC);
@@ -396,6 +468,44 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(203, 54);
             this.flowLayoutPanel2.TabIndex = 15;
+            // 
+            // btnGuardarC
+            // 
+            this.btnGuardarC.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.verde;
+            this.btnGuardarC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarC.FlatAppearance.BorderSize = 0;
+            this.btnGuardarC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarC.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarC.Location = new System.Drawing.Point(3, 2);
+            this.btnGuardarC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardarC.Name = "btnGuardarC";
+            this.btnGuardarC.Size = new System.Drawing.Size(89, 43);
+            this.btnGuardarC.TabIndex = 0;
+            this.btnGuardarC.Text = "Guardar";
+            this.btnGuardarC.UseVisualStyleBackColor = true;
+            this.btnGuardarC.Click += new System.EventHandler(this.btnGuardarC_Click);
+            // 
+            // btnGuardarCambioC
+            // 
+            this.btnGuardarCambioC.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.verde;
+            this.btnGuardarCambioC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarCambioC.FlatAppearance.BorderSize = 0;
+            this.btnGuardarCambioC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambioC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambioC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarCambioC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCambioC.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCambioC.Location = new System.Drawing.Point(98, 2);
+            this.btnGuardarCambioC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardarCambioC.Name = "btnGuardarCambioC";
+            this.btnGuardarCambioC.Size = new System.Drawing.Size(89, 43);
+            this.btnGuardarCambioC.TabIndex = 1;
+            this.btnGuardarCambioC.Text = "Guardar*";
+            this.btnGuardarCambioC.UseVisualStyleBackColor = true;
+            this.btnGuardarCambioC.Click += new System.EventHandler(this.btnGuardarCambioC_Click);
             // 
             // txtCargoG
             // 
@@ -458,6 +568,24 @@
             this.panel11.Size = new System.Drawing.Size(224, 1);
             this.panel11.TabIndex = 11;
             // 
+            // btnVolverPersonal
+            // 
+            this.btnVolverPersonal.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.back;
+            this.btnVolverPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolverPersonal.FlatAppearance.BorderSize = 0;
+            this.btnVolverPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnVolverPersonal.Location = new System.Drawing.Point(600, 30);
+            this.btnVolverPersonal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolverPersonal.Name = "btnVolverPersonal";
+            this.btnVolverPersonal.Size = new System.Drawing.Size(44, 30);
+            this.btnVolverPersonal.TabIndex = 15;
+            this.btnVolverPersonal.UseVisualStyleBackColor = true;
+            this.btnVolverPersonal.Click += new System.EventHandler(this.btnVolverPersonal_Click);
+            // 
             // PanelBtnguardarPer
             // 
             this.PanelBtnguardarPer.Controls.Add(this.btnGuardarPersonal);
@@ -467,6 +595,43 @@
             this.PanelBtnguardarPer.Name = "PanelBtnguardarPer";
             this.PanelBtnguardarPer.Size = new System.Drawing.Size(196, 58);
             this.PanelBtnguardarPer.TabIndex = 14;
+            // 
+            // btnGuardarPersonal
+            // 
+            this.btnGuardarPersonal.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.verde;
+            this.btnGuardarPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarPersonal.FlatAppearance.BorderSize = 0;
+            this.btnGuardarPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPersonal.Location = new System.Drawing.Point(3, 2);
+            this.btnGuardarPersonal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardarPersonal.Name = "btnGuardarPersonal";
+            this.btnGuardarPersonal.Size = new System.Drawing.Size(89, 43);
+            this.btnGuardarPersonal.TabIndex = 0;
+            this.btnGuardarPersonal.Text = "Guardar";
+            this.btnGuardarPersonal.UseVisualStyleBackColor = true;
+            this.btnGuardarPersonal.Click += new System.EventHandler(this.btnGuardarPersonal_Click);
+            // 
+            // btnGuardarCambiosPersonal
+            // 
+            this.btnGuardarCambiosPersonal.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.verde;
+            this.btnGuardarCambiosPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarCambiosPersonal.FlatAppearance.BorderSize = 0;
+            this.btnGuardarCambiosPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambiosPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambiosPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarCambiosPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCambiosPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCambiosPersonal.Location = new System.Drawing.Point(98, 2);
+            this.btnGuardarCambiosPersonal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardarCambiosPersonal.Name = "btnGuardarCambiosPersonal";
+            this.btnGuardarCambiosPersonal.Size = new System.Drawing.Size(89, 43);
+            this.btnGuardarCambiosPersonal.TabIndex = 1;
+            this.btnGuardarCambiosPersonal.Text = "Guardar*";
+            this.btnGuardarCambiosPersonal.UseVisualStyleBackColor = true;
             // 
             // btnAgregarCargo
             // 
@@ -661,165 +826,6 @@
             this.dataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             // 
-            // btnVolverCargos
-            // 
-            this.btnVolverCargos.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.back;
-            this.btnVolverCargos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolverCargos.FlatAppearance.BorderSize = 0;
-            this.btnVolverCargos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVolverCargos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnVolverCargos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverCargos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverCargos.ForeColor = System.Drawing.Color.White;
-            this.btnVolverCargos.Location = new System.Drawing.Point(345, 126);
-            this.btnVolverCargos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnVolverCargos.Name = "btnVolverCargos";
-            this.btnVolverCargos.Size = new System.Drawing.Size(44, 30);
-            this.btnVolverCargos.TabIndex = 16;
-            this.btnVolverCargos.UseVisualStyleBackColor = true;
-            this.btnVolverCargos.Click += new System.EventHandler(this.btnVolverCargos_Click);
-            // 
-            // btnGuardarC
-            // 
-            this.btnGuardarC.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.verde;
-            this.btnGuardarC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardarC.FlatAppearance.BorderSize = 0;
-            this.btnGuardarC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarC.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarC.Location = new System.Drawing.Point(3, 2);
-            this.btnGuardarC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGuardarC.Name = "btnGuardarC";
-            this.btnGuardarC.Size = new System.Drawing.Size(89, 43);
-            this.btnGuardarC.TabIndex = 0;
-            this.btnGuardarC.Text = "Guardar";
-            this.btnGuardarC.UseVisualStyleBackColor = true;
-            this.btnGuardarC.Click += new System.EventHandler(this.btnGuardarC_Click);
-            // 
-            // btnGuardarCambioC
-            // 
-            this.btnGuardarCambioC.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.verde;
-            this.btnGuardarCambioC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardarCambioC.FlatAppearance.BorderSize = 0;
-            this.btnGuardarCambioC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarCambioC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarCambioC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarCambioC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarCambioC.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCambioC.Location = new System.Drawing.Point(98, 2);
-            this.btnGuardarCambioC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGuardarCambioC.Name = "btnGuardarCambioC";
-            this.btnGuardarCambioC.Size = new System.Drawing.Size(89, 43);
-            this.btnGuardarCambioC.TabIndex = 1;
-            this.btnGuardarCambioC.Text = "Guardar*";
-            this.btnGuardarCambioC.UseVisualStyleBackColor = true;
-            this.btnGuardarCambioC.Click += new System.EventHandler(this.btnGuardarCambioC_Click);
-            // 
-            // btnVolverPersonal
-            // 
-            this.btnVolverPersonal.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.back;
-            this.btnVolverPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolverPersonal.FlatAppearance.BorderSize = 0;
-            this.btnVolverPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVolverPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnVolverPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverPersonal.ForeColor = System.Drawing.Color.White;
-            this.btnVolverPersonal.Location = new System.Drawing.Point(600, 30);
-            this.btnVolverPersonal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnVolverPersonal.Name = "btnVolverPersonal";
-            this.btnVolverPersonal.Size = new System.Drawing.Size(44, 30);
-            this.btnVolverPersonal.TabIndex = 15;
-            this.btnVolverPersonal.UseVisualStyleBackColor = true;
-            this.btnVolverPersonal.Click += new System.EventHandler(this.btnVolverPersonal_Click);
-            // 
-            // btnGuardarPersonal
-            // 
-            this.btnGuardarPersonal.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.verde;
-            this.btnGuardarPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardarPersonal.FlatAppearance.BorderSize = 0;
-            this.btnGuardarPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarPersonal.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarPersonal.Location = new System.Drawing.Point(3, 2);
-            this.btnGuardarPersonal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGuardarPersonal.Name = "btnGuardarPersonal";
-            this.btnGuardarPersonal.Size = new System.Drawing.Size(89, 43);
-            this.btnGuardarPersonal.TabIndex = 0;
-            this.btnGuardarPersonal.Text = "Guardar";
-            this.btnGuardarPersonal.UseVisualStyleBackColor = true;
-            this.btnGuardarPersonal.Click += new System.EventHandler(this.btnGuardarPersonal_Click);
-            // 
-            // btnGuardarCambiosPersonal
-            // 
-            this.btnGuardarCambiosPersonal.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.verde;
-            this.btnGuardarCambiosPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardarCambiosPersonal.FlatAppearance.BorderSize = 0;
-            this.btnGuardarCambiosPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarCambiosPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarCambiosPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarCambiosPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarCambiosPersonal.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarCambiosPersonal.Location = new System.Drawing.Point(98, 2);
-            this.btnGuardarCambiosPersonal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGuardarCambiosPersonal.Name = "btnGuardarCambiosPersonal";
-            this.btnGuardarCambiosPersonal.Size = new System.Drawing.Size(89, 43);
-            this.btnGuardarCambiosPersonal.TabIndex = 1;
-            this.btnGuardarCambiosPersonal.Text = "Guardar*";
-            this.btnGuardarCambiosPersonal.UseVisualStyleBackColor = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "";
-            this.Eliminar.Image = global::SoftAttendanceProject.Properties.Resources.X;
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eliminar.Name = "Eliminar";
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "";
-            this.Editar.Image = global::SoftAttendanceProject.Properties.Resources.pencil;
-            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Editar.Name = "Editar";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.btnAgregar.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.mas;
-            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(925, 0);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(68, 66);
-            this.btnAgregar.TabIndex = 5;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SoftAttendanceProject.Properties.Resources.buscar__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(295, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // EditarC
-            // 
-            this.EditarC.HeaderText = "";
-            this.EditarC.Image = global::SoftAttendanceProject.Properties.Resources.pencil;
-            this.EditarC.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.EditarC.Name = "EditarC";
-            // 
             // Personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -834,6 +840,7 @@
             this.Load += new System.EventHandler(this.Personal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoPersonal)).EndInit();
             this.PanelPaginado.ResumeLayout(false);
             this.PanelPaginado.PerformLayout();
@@ -844,7 +851,6 @@
             this.PanelCargos.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.PanelBtnguardarPer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
