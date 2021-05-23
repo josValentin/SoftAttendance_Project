@@ -11,6 +11,6 @@ namespace SoftAttendanceProject.Logica
 
         public string Cargo { get; set; }
 
-        public double SueldoPorHora { get; set; }
+        public double SueldoPorHora { get; set; } //Sueldo por hora 17/05
     }
 }
