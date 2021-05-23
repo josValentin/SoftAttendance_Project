@@ -64,7 +64,6 @@
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.panelbienvenida = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -462,7 +461,6 @@
             // PanelPadre
             // 
             this.PanelPadre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.PanelPadre.Controls.Add(this.textBox1);
             this.PanelPadre.Controls.Add(this.panelbienvenida);
             this.PanelPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelPadre.Location = new System.Drawing.Point(199, 0);
@@ -490,15 +488,6 @@
             this.label3.Text = "Bienvenidoa SoftAttendance";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(580, 497);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "HOLA PERU";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -524,7 +513,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelPadre.ResumeLayout(false);
-            this.PanelPadre.PerformLayout();
             this.panelbienvenida.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -568,6 +556,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelbienvenida;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

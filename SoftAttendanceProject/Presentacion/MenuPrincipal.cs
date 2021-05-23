@@ -34,10 +34,5 @@ namespace SoftAttendanceProject.Presentacion
             control.Dock = DockStyle.Fill;
             PanelPadre.Controls.Add(control);
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
