@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 //23654
+//SI SE PUEDE VER
 
 namespace SoftAttendanceProject.Presentacion
 {
