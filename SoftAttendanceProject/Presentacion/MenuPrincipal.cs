@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-// PRUEBAAAAAAAAAAAAAAAA
-// 233333333
-
+//23654
 
 namespace SoftAttendanceProject.Presentacion
 {
