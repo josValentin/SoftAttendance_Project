@@ -28,7 +28,7 @@ namespace SoftAttendanceProject.Presentacion
 
         private void btnPersonal_Click(object sender, EventArgs e)
         {
-
+            //PRUEBA
             PanelPadre.Controls.Clear();
             Personal control = new Personal();
             control.Dock = DockStyle.Fill;

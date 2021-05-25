@@ -89,8 +89,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 918);
+            this.panel1.Size = new System.Drawing.Size(149, 609);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -102,9 +103,10 @@
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 356);
+            this.panel4.Location = new System.Drawing.Point(0, 152);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(199, 562);
+            this.panel4.Size = new System.Drawing.Size(149, 457);
             this.panel4.TabIndex = 3;
             // 
             // panel17
@@ -113,9 +115,10 @@
             this.panel17.Controls.Add(this.pictureBox1);
             this.panel17.Controls.Add(this.panel22);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(0, 375);
+            this.panel17.Location = new System.Drawing.Point(0, 305);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(199, 187);
+            this.panel17.Size = new System.Drawing.Size(149, 152);
             this.panel17.TabIndex = 4;
             // 
             // label1
@@ -123,9 +126,10 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 111);
+            this.label1.Location = new System.Drawing.Point(0, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 35);
+            this.label1.Size = new System.Drawing.Size(149, 28);
             this.label1.TabIndex = 2;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -133,9 +137,10 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::SoftAttendanceProject.Properties.Resources.Logo_SoftAttendance;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(149, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -144,8 +149,9 @@
             // 
             this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel22.Location = new System.Drawing.Point(0, 0);
+            this.panel22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(199, 14);
+            this.panel22.Size = new System.Drawing.Size(149, 11);
             this.panel22.TabIndex = 0;
             // 
             // panel18
@@ -155,9 +161,10 @@
             this.panel18.Controls.Add(this.panel19);
             this.panel18.Controls.Add(this.panel20);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel18.Location = new System.Drawing.Point(0, 300);
+            this.panel18.Location = new System.Drawing.Point(0, 244);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(199, 75);
+            this.panel18.Size = new System.Drawing.Size(149, 61);
             this.panel18.TabIndex = 5;
             // 
             // btnEstaciones
@@ -172,9 +179,10 @@
             this.btnEstaciones.ForeColor = System.Drawing.Color.White;
             this.btnEstaciones.Image = global::SoftAttendanceProject.Properties.Resources.puesta_en_marcha;
             this.btnEstaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstaciones.Location = new System.Drawing.Point(17, 14);
+            this.btnEstaciones.Location = new System.Drawing.Point(13, 11);
+            this.btnEstaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEstaciones.Name = "btnEstaciones";
-            this.btnEstaciones.Size = new System.Drawing.Size(172, 61);
+            this.btnEstaciones.Size = new System.Drawing.Size(128, 50);
             this.btnEstaciones.TabIndex = 2;
             this.btnEstaciones.Text = "Estaciones";
             this.btnEstaciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -183,25 +191,28 @@
             // panel21
             // 
             this.panel21.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel21.Location = new System.Drawing.Point(189, 14);
+            this.panel21.Location = new System.Drawing.Point(141, 11);
+            this.panel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(10, 61);
+            this.panel21.Size = new System.Drawing.Size(8, 50);
             this.panel21.TabIndex = 3;
             // 
             // panel19
             // 
             this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel19.Location = new System.Drawing.Point(0, 14);
+            this.panel19.Location = new System.Drawing.Point(0, 11);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(17, 61);
+            this.panel19.Size = new System.Drawing.Size(13, 50);
             this.panel19.TabIndex = 1;
             // 
             // panel20
             // 
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(199, 14);
+            this.panel20.Size = new System.Drawing.Size(149, 11);
             this.panel20.TabIndex = 0;
             // 
             // panel14
@@ -210,9 +221,10 @@
             this.panel14.Controls.Add(this.panel15);
             this.panel14.Controls.Add(this.panel16);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 225);
+            this.panel14.Location = new System.Drawing.Point(0, 183);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(199, 75);
+            this.panel14.Size = new System.Drawing.Size(149, 61);
             this.panel14.TabIndex = 3;
             // 
             // btnRespaldos
@@ -225,9 +237,10 @@
             this.btnRespaldos.ForeColor = System.Drawing.Color.White;
             this.btnRespaldos.Image = global::SoftAttendanceProject.Properties.Resources.backup;
             this.btnRespaldos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRespaldos.Location = new System.Drawing.Point(17, 14);
+            this.btnRespaldos.Location = new System.Drawing.Point(13, 11);
+            this.btnRespaldos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRespaldos.Name = "btnRespaldos";
-            this.btnRespaldos.Size = new System.Drawing.Size(182, 61);
+            this.btnRespaldos.Size = new System.Drawing.Size(136, 50);
             this.btnRespaldos.TabIndex = 2;
             this.btnRespaldos.Text = "Respaldos";
             this.btnRespaldos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -236,17 +249,19 @@
             // panel15
             // 
             this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel15.Location = new System.Drawing.Point(0, 14);
+            this.panel15.Location = new System.Drawing.Point(0, 11);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(17, 61);
+            this.panel15.Size = new System.Drawing.Size(13, 50);
             this.panel15.TabIndex = 1;
             // 
             // panel16
             // 
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(199, 14);
+            this.panel16.Size = new System.Drawing.Size(149, 11);
             this.panel16.TabIndex = 0;
             // 
             // panel11
@@ -255,9 +270,10 @@
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.panel13);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 150);
+            this.panel11.Location = new System.Drawing.Point(0, 122);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(199, 75);
+            this.panel11.Size = new System.Drawing.Size(149, 61);
             this.panel11.TabIndex = 2;
             // 
             // btnRestaurar
@@ -270,9 +286,10 @@
             this.btnRestaurar.ForeColor = System.Drawing.Color.White;
             this.btnRestaurar.Image = global::SoftAttendanceProject.Properties.Resources.estadisticas;
             this.btnRestaurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRestaurar.Location = new System.Drawing.Point(17, 14);
+            this.btnRestaurar.Location = new System.Drawing.Point(13, 11);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(182, 61);
+            this.btnRestaurar.Size = new System.Drawing.Size(136, 50);
             this.btnRestaurar.TabIndex = 2;
             this.btnRestaurar.Text = "Restaurar Bd";
             this.btnRestaurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -281,17 +298,19 @@
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(0, 14);
+            this.panel12.Location = new System.Drawing.Point(0, 11);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(17, 61);
+            this.panel12.Size = new System.Drawing.Size(13, 50);
             this.panel12.TabIndex = 1;
             // 
             // panel13
             // 
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(199, 14);
+            this.panel13.Size = new System.Drawing.Size(149, 11);
             this.panel13.TabIndex = 0;
             // 
             // panel8
@@ -300,9 +319,10 @@
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 75);
+            this.panel8.Location = new System.Drawing.Point(0, 61);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(199, 75);
+            this.panel8.Size = new System.Drawing.Size(149, 61);
             this.panel8.TabIndex = 1;
             // 
             // btnUsuarios
@@ -315,9 +335,10 @@
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Image = global::SoftAttendanceProject.Properties.Resources.grupo;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(17, 14);
+            this.btnUsuarios.Location = new System.Drawing.Point(13, 11);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(182, 61);
+            this.btnUsuarios.Size = new System.Drawing.Size(136, 50);
             this.btnUsuarios.TabIndex = 2;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -326,17 +347,19 @@
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 14);
+            this.panel9.Location = new System.Drawing.Point(0, 11);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(17, 61);
+            this.panel9.Size = new System.Drawing.Size(13, 50);
             this.panel9.TabIndex = 1;
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(199, 14);
+            this.panel10.Size = new System.Drawing.Size(149, 11);
             this.panel10.TabIndex = 0;
             // 
             // panel5
@@ -346,8 +369,9 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(199, 75);
+            this.panel5.Size = new System.Drawing.Size(149, 61);
             this.panel5.TabIndex = 0;
             // 
             // btnRegistro
@@ -360,9 +384,10 @@
             this.btnRegistro.ForeColor = System.Drawing.Color.White;
             this.btnRegistro.Image = global::SoftAttendanceProject.Properties.Resources.reloj;
             this.btnRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistro.Location = new System.Drawing.Point(17, 14);
+            this.btnRegistro.Location = new System.Drawing.Point(13, 11);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.Size = new System.Drawing.Size(182, 61);
+            this.btnRegistro.Size = new System.Drawing.Size(136, 50);
             this.btnRegistro.TabIndex = 2;
             this.btnRegistro.Text = "Registro";
             this.btnRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -371,17 +396,19 @@
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 14);
+            this.panel7.Location = new System.Drawing.Point(0, 11);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(17, 61);
+            this.panel7.Size = new System.Drawing.Size(13, 50);
             this.panel7.TabIndex = 1;
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(199, 14);
+            this.panel6.Size = new System.Drawing.Size(149, 11);
             this.panel6.TabIndex = 0;
             // 
             // btnPersonal
@@ -392,9 +419,10 @@
             this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonal.ForeColor = System.Drawing.Color.White;
-            this.btnPersonal.Location = new System.Drawing.Point(0, 155);
+            this.btnPersonal.Location = new System.Drawing.Point(0, 126);
+            this.btnPersonal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPersonal.Name = "btnPersonal";
-            this.btnPersonal.Size = new System.Drawing.Size(199, 81);
+            this.btnPersonal.Size = new System.Drawing.Size(149, 66);
             this.btnPersonal.TabIndex = 2;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.UseVisualStyleBackColor = false;
@@ -408,9 +436,10 @@
             this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultas.Location = new System.Drawing.Point(0, 74);
+            this.btnConsultas.Location = new System.Drawing.Point(0, 60);
+            this.btnConsultas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(199, 81);
+            this.btnConsultas.Size = new System.Drawing.Size(149, 66);
             this.btnConsultas.TabIndex = 1;
             this.btnConsultas.Text = "Pre planilla";
             this.btnConsultas.UseVisualStyleBackColor = false;
@@ -424,8 +453,9 @@
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(199, 74);
+            this.panel3.Size = new System.Drawing.Size(149, 60);
             this.panel3.TabIndex = 0;
             // 
             // label2
@@ -433,9 +463,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 0);
+            this.label2.Location = new System.Drawing.Point(24, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 74);
+            this.label2.Size = new System.Drawing.Size(125, 60);
             this.label2.TabIndex = 3;
             this.label2.Text = "SoftAttendance";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -443,9 +474,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(13, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 74);
+            this.pictureBox3.Size = new System.Drawing.Size(11, 60);
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
@@ -453,8 +485,9 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 74);
+            this.pictureBox2.Size = new System.Drawing.Size(13, 60);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -463,17 +496,19 @@
             this.PanelPadre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.PanelPadre.Controls.Add(this.panelbienvenida);
             this.PanelPadre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelPadre.Location = new System.Drawing.Point(199, 0);
+            this.PanelPadre.Location = new System.Drawing.Point(149, 0);
+            this.PanelPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelPadre.Name = "PanelPadre";
-            this.PanelPadre.Size = new System.Drawing.Size(939, 918);
+            this.PanelPadre.Size = new System.Drawing.Size(754, 609);
             this.PanelPadre.TabIndex = 1;
             // 
             // panelbienvenida
             // 
             this.panelbienvenida.Controls.Add(this.label3);
-            this.panelbienvenida.Location = new System.Drawing.Point(79, 74);
+            this.panelbienvenida.Location = new System.Drawing.Point(59, 60);
+            this.panelbienvenida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelbienvenida.Name = "panelbienvenida";
-            this.panelbienvenida.Size = new System.Drawing.Size(777, 357);
+            this.panelbienvenida.Size = new System.Drawing.Size(583, 290);
             this.panelbienvenida.TabIndex = 0;
             // 
             // label3
@@ -482,19 +517,21 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(777, 357);
+            this.label3.Size = new System.Drawing.Size(583, 290);
             this.label3.TabIndex = 0;
             this.label3.Text = "Bienvenidoa SoftAttendance";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 918);
+            this.ClientSize = new System.Drawing.Size(903, 609);
             this.Controls.Add(this.PanelPadre);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
