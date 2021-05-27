@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+//23654
+//SI SE PUEDE VER
+
 namespace SoftAttendanceProject.Presentacion
 {
     public partial class MenuPrincipal : Form
@@ -28,7 +31,7 @@ namespace SoftAttendanceProject.Presentacion
 
         private void btnPersonal_Click(object sender, EventArgs e)
         {
-
+            //PRUEBA
             PanelPadre.Controls.Clear();
             Personal control = new Personal();
             control.Dock = DockStyle.Fill;
