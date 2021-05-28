@@ -9,7 +9,7 @@ namespace SoftAttendanceProject.Datos
 {
     public class CONEXIONMAESTRA
     {
-        public static string conexion = @"Data source=MSI; Initial Catalog=SOFT_ATTENDACE; Integrated Security=true";
+        public static string conexion = "Data source=DESKTOP-6G9RBJB; Initial Catalog=SOFT_ATTENDACE; Integrated Security=true";
         public static SqlConnection conectar = new SqlConnection(conexion);
         public static void abrir()
         {

@@ -131,6 +131,44 @@ namespace SoftAttendanceProject.Datos
                 CONEXIONMAESTRA.cerrar();
             }
         }
+        public void BuscarPersonalIdentidad(ref DataTable dt, string buscador)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonalIdentidad", CONEXIONMAESTRA.conectar);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
+        public void BuscarAsistenciasId(ref DataTable dt, int Idpersonal)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("buscarAsistenciasId", CONEXIONMAESTRA.conectar);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@Idpersonal", Idpersonal);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
         public bool restaurar_personal(Lpersonal parametros)
         {
             try
@@ -174,5 +212,6 @@ namespace SoftAttendanceProject.Datos
                 CONEXIONMAESTRA.cerrar();
             }
         }
+
     }
 }
