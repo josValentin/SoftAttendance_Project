@@ -43,8 +43,8 @@ namespace SoftAttendanceProject.Datos
                 SqlCommand cmd = new SqlCommand("editar_Cargo", CONEXIONMAESTRA.conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", parametros.Id_cargo);
-                cmd.Parameters.AddWithValue("@SueldoPorHora", parametros.SueldoPorHora);
-                cmd.Parameters.AddWithValue("@SueldoPorHora", parametros.SueldoPorHora);
+                cmd.Parameters.AddWithValue("@Sueldo", parametros.SueldoPorHora);
+                cmd.Parameters.AddWithValue("@Cargo", parametros.Cargo);
                 cmd.ExecuteNonQuery();
                 return true;
             }
