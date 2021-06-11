@@ -47,11 +47,24 @@
     <Compile Include="Datos\CONEXIONMAESTRA.cs" />
     <Compile Include="Datos\Dasistencias.cs" />
     <Compile Include="Datos\Dcargos.cs" />
+    <Compile Include="Datos\Dmodulos.cs" />
+    <Compile Include="Datos\Dpermisos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
+    <Compile Include="Datos\Dusuarios.cs" />
+    <Compile Include="Dpermisos.cs" />
     <Compile Include="Logica\Bases.cs" />
     <Compile Include="Logica\Lasistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
+    <Compile Include="Logica\Lmodulos.cs" />
+    <Compile Include="Logica\Lpermisos.cs" />
     <Compile Include="Logica\Lpersonal.cs" />
+    <Compile Include="Logica\Lusuarios.cs" />
+    <Compile Include="Presentacion\CtlUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CtlUsuarios.designer.cs">
+      <DependentUpon>CtlUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\CtlUsuarios.resx">
+      <DependentUpon>CtlUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,14 +99,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,9 +136,6 @@
     <None Include="Resources\naranja.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MonoOrus.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\buscar %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +161,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo_SoftAttendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hombre %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hombre %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Afro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
