@@ -7,9 +7,9 @@ using System.Windows.Forms;
 using System.Globalization;
 namespace SoftAttendanceProject.Logica
 {
-    public class Bases
+  public  class Bases
     {
-
+    
         public static void DiseñoDtv(ref DataGridView Listado)
         {
             Listado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -21,7 +21,7 @@ namespace SoftAttendanceProject.Logica
             Listado.RowHeadersVisible = false;
 
             DataGridViewCellStyle cabecera = new DataGridViewCellStyle();
-            cabecera.BackColor = Color.FromArgb(29, 29, 29);
+            cabecera.BackColor= Color.FromArgb(29, 29, 29);
             cabecera.ForeColor = Color.White;
             cabecera.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             Listado.ColumnHeadersDefaultCellStyle = cabecera;
@@ -32,38 +32,38 @@ namespace SoftAttendanceProject.Logica
             {
                 string estado;
                 estado = row.Cells["Estado"].Value.ToString();
-                if (estado == "ELIMINADO")
+                if(estado=="ELIMINADO")
                 {
                     row.DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Strikeout | FontStyle.Bold);
                     row.DefaultCellStyle.ForeColor = Color.FromArgb(255, 128, 128);
                 }
             }
-
+           
         }
         public static object Decimales(TextBox CajaTexto, KeyPressEventArgs e)
         {
-            if ((e.KeyChar == '.') || (e.KeyChar == ','))
+            if((e.KeyChar=='.') || (e.KeyChar==',') )
             {
                 e.KeyChar = System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator[0];
 
             }
-            if (char.IsDigit(e.KeyChar))
+            if(char.IsDigit(e.KeyChar))
             {
                 e.Handled = false;
             }
-            else if (char.IsControl(e.KeyChar))
+            else if(char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
-            else if (e.KeyChar == '.' && (~CajaTexto.Text.IndexOf(".")) != 0)
+            else if (e.KeyChar=='.' && (~CajaTexto.Text.IndexOf("."))!=0)
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == '.')
+            else if(e.KeyChar=='.')
             {
                 e.Handled = false;
             }
-            else if (e.KeyChar == ',')
+            else if(e.KeyChar==',')
             {
                 e.Handled = false;
             }
@@ -72,7 +72,7 @@ namespace SoftAttendanceProject.Logica
                 e.Handled = true;
             }
             return null;
-
+          
 
         }
 
@@ -89,9 +89,9 @@ namespace SoftAttendanceProject.Logica
             WeekOfYear,
             Year
         }
-        public static long DateDiff(DateInterval intervalType, DateTime dateOne, DateTime dateTwo)
+       public static long DateDiff(DateInterval intervalType, DateTime dateOne, DateTime dateTwo)
         {
-            switch (intervalType)
+            switch(intervalType)
             {
                 case DateInterval.Day:
                 case DateInterval.DayOfYear:
@@ -137,4 +137,3 @@ namespace SoftAttendanceProject.Logica
         }
     }
 }
-

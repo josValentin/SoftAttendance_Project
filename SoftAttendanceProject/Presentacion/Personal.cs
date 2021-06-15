@@ -89,7 +89,7 @@ namespace SoftAttendanceProject.Presentacion
             Bases.DiseñoDtvEliminar(ref dataListadoPersonal);
             PanelPaginado.Visible = true;
             dataListadoPersonal.Columns[2].Visible = false;
-            dataListadoPersonal.Columns[7].Visible = false;
+           dataListadoPersonal.Columns[7].Visible = false;
         }
 
         private void Insertar_Personal()
@@ -240,7 +240,7 @@ namespace SoftAttendanceProject.Presentacion
             parametros.Id_cargo = Idcargo;
             parametros.Cargo = txtCargoG.Text;
             parametros.SueldoPorHora = Convert.ToDouble(txtSueldoG.Text);
-            if (funcion.editar_cargo(parametros) == true)
+            if (funcion.editar_Cargo(parametros) == true)
             {
                 txtCargo.Clear();
                 BuscarCargos();
@@ -482,6 +482,11 @@ namespace SoftAttendanceProject.Presentacion
         {
             ReiniciarPaginado();
             MostrarPersonal();
+        }
+
+        private void dataListadoCargos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

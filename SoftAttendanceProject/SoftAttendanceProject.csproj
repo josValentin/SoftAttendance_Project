@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Workflow.ComponentModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,8 +53,27 @@
     <Compile Include="Datos\Dpermisos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
     <Compile Include="Datos\Dusuarios.cs" />
-    <Compile Include="Dpermisos.cs" />
+    <Compile Include="Presentacion\AsistenteInstalacion\ConexionRemota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteInstalacion\ConexionRemota.Designer.cs">
+      <DependentUpon>ConexionRemota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteInstalacion\ElecccionServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteInstalacion\ElecccionServidor.Designer.cs">
+      <DependentUpon>ElecccionServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteInstalacion\InstalacionBd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteInstalacion\InstalacionBd.Designer.cs">
+      <DependentUpon>InstalacionBd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logica\Bases.cs" />
+    <Compile Include="Logica\Desencryptacion.cs" />
+    <Compile Include="Logica\Encryptacion.cs" />
     <Compile Include="Logica\Lasistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
     <Compile Include="Logica\Lmodulos.cs" />
@@ -64,6 +85,12 @@
     </Compile>
     <Compile Include="Presentacion\CtlUsuarios.designer.cs">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -85,8 +112,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\AsistenteInstalacion\ElecccionServidor.resx">
+      <DependentUpon>ElecccionServidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\AsistenteInstalacion\InstalacionBd.resx">
+      <DependentUpon>InstalacionBd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\CtlUsuarios.resx">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -99,12 +135,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -112,76 +154,55 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lapiz.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reloj-de-escritorio.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reloj.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\grupo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\estadisticas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backup.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\puesta-en-marcha.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\naranja.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buscar %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\verde.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cerca.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cerca %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Resources\animal.png" />
+    <Content Include="Resources\azul.png" />
     <None Include="Resources\X.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pencil.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\lapiz.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\Logo_SoftAttendance1.png" />
     <None Include="Resources\Logo_SoftAttendance.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\foto %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\puesta-en-marcha.png" />
+    <None Include="Resources\naranja1.png" />
+    <None Include="Resources\backup1.png" />
+    <None Include="Resources\estadisticas.png" />
+    <None Include="Resources\backup.png" />
+    <Content Include="Resources\buscar %281%29.png" />
+    <None Include="Resources\grupo.png" />
+    <None Include="Resources\reloj.png" />
+    <None Include="Resources\foto %281%291.png" />
     <None Include="Resources\hombre %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hombre.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\hombre %282%29.png" />
     <None Include="Resources\hombre %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Afro.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\animal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager.png" />
+    <None Include="Resources\hombre %284%29.png" />
+    <None Include="Resources\hombre %285%29.png" />
+    <None Include="Resources\chico.png" />
+    <Content Include="Resources\clasificar.png" />
+    <Content Include="Resources\comenzar.png" />
+    <Content Include="Resources\coworking.png" />
+    <Content Include="Resources\despertador %281%29.png" />
+    <Content Include="Resources\editar.png" />
+    <Content Include="Resources\Eliminar.png" />
+    <Content Include="Resources\estaciones.png" />
+    <Content Include="Resources\extraterrestre.png" />
+    <Content Include="Resources\foto %281%29.png" />
+    <Content Include="Resources\fuego %281%29.png" />
+    <None Include="Resources\hombre %286%29.png" />
+    <None Include="Resources\hombre.png" />
+    <Content Include="Resources\hora.png" />
+    <Content Include="Resources\mas.png" />
+    <Content Include="Resources\MonoOrus.png" />
+    <Content Include="Resources\MonoOrus1.png" />
+    <Content Include="Resources\MonoOrus2.png" />
+    <Content Include="Resources\naranja.png" />
+    <Content Include="Resources\nuclear.png" />
+    <Content Include="Resources\palanca-de-mando.png" />
+    <None Include="Resources\pencil.png" />
+    <Content Include="Resources\respaldo.png" />
+    <Content Include="Resources\Rojo.png" />
+    <Content Include="Resources\rosa.png" />
+    <Content Include="Resources\Trinaranja.png" />
+    <Content Include="Resources\verde.png" />
+    <Content Include="Resources\volver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

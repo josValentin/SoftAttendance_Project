@@ -9,8 +9,8 @@ using System.Windows.Forms;
 
 namespace SoftAttendanceProject.Datos
 {
-	public class Dasistencias
-	{
+  public class Dasistencias
+    {
 		public void buscarAsistenciasId(ref DataTable dt, int Idpersonal)
 		{
 			try
@@ -32,7 +32,7 @@ namespace SoftAttendanceProject.Datos
 		}
 		public bool InsertarAsistencias(Lasistencias parametros)
 		{
-			try
+			try 
 			{
 				CONEXIONMAESTRA.abrir();
 				SqlCommand cmd = new SqlCommand("Insertar_ASISTENCIAS", CONEXIONMAESTRA.conectar);

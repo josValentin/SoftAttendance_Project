@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-//23654
-//SI SE PUEDE VER
 
 namespace SoftAttendanceProject.Presentacion
 {
@@ -31,9 +29,17 @@ namespace SoftAttendanceProject.Presentacion
 
         private void btnPersonal_Click(object sender, EventArgs e)
         {
-            //PRUEBA
+           
             PanelPadre.Controls.Clear();
             Personal control = new Personal();
+            control.Dock = DockStyle.Fill;
+            PanelPadre.Controls.Add(control);
+        }
+
+        private void btnUsuarios_Click_1(object sender, EventArgs e)
+        {
+            PanelPadre.Controls.Clear();
+            CtlUsuarios control = new CtlUsuarios();
             control.Dock = DockStyle.Fill;
             PanelPadre.Controls.Add(control);
         }

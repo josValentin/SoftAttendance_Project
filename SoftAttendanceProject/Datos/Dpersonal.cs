@@ -6,212 +6,189 @@ using System.Data;
 using System.Data.SqlClient;
 using SoftAttendanceProject.Logica;
 using System.Windows.Forms;
-
 namespace SoftAttendanceProject.Datos
 {
-    public class Dpersonal
+   public  class Dpersonal
     {
-        public bool InsertarPersonal(Lpersonal parametros)
+        public bool InsertarPersonal(Lpersonal parametros )
         {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlCommand cmd = new SqlCommand("InsertarPersonal", CONEXIONMAESTRA.conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
-                cmd.Parameters.AddWithValue("@Identificacion", parametros.Identificacion);
-                cmd.Parameters.AddWithValue("@Pais", parametros.Pais);
-                cmd.Parameters.AddWithValue("@Id_cargo", parametros.Id_cargo);
-                cmd.Parameters.AddWithValue("@SueldoPorHora", parametros.SueldoPorHora);
-                cmd.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("InsertarPersonal", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
+				cmd.Parameters.AddWithValue("@Identificacion", parametros.Identificacion);
+				cmd.Parameters.AddWithValue("@Pais", parametros.Pais );
+				cmd.Parameters.AddWithValue("@Id_cargo", parametros.Id_cargo );
+				cmd.Parameters.AddWithValue("@SueldoPorHora", parametros.SueldoPorHora);
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
 
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-        public bool editarPersonal(Lpersonal parametros)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlCommand cmd = new SqlCommand("editarPersonal", CONEXIONMAESTRA.conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+		public bool editarPersonal(Lpersonal parametros)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("editarPersonal", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Id_personal", parametros.Id_personal);
+				cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
+				cmd.Parameters.AddWithValue("@Identificacion", parametros.Identificacion);
+				cmd.Parameters.AddWithValue("@Pais", parametros.Pais);
+				cmd.Parameters.AddWithValue("@Id_cargo", parametros.Id_cargo);
+				cmd.Parameters.AddWithValue("@Sueldo_por_hora", parametros.SueldoPorHora);
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
 
-                cmd.Parameters.AddWithValue("@Id_personal", parametros.Id_personal);
-                cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
-                cmd.Parameters.AddWithValue("@Identificacion", parametros.Identificacion);
-                cmd.Parameters.AddWithValue("@Pais", parametros.Pais);
-                cmd.Parameters.AddWithValue("@Id_cargo", parametros.Id_cargo);
-                cmd.Parameters.AddWithValue("@Sueldo_por_hora", parametros.SueldoPorHora);
-                cmd.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+		public bool eliminarPersonal(Lpersonal parametros)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("eliminarPersonal", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Idpersonal", parametros.Id_personal);;
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
 
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-        public bool eliminarPersonal(Lpersonal parametros)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlCommand cmd = new SqlCommand("eliminarPersonal", CONEXIONMAESTRA.conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+		public void MostrarPersonal(ref DataTable dt, int desde,int hasta)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("mostrarPersonal", CONEXIONMAESTRA.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
+				da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
+				da.Fill(dt);
 
-                cmd.Parameters.AddWithValue("@Idpersonal", parametros.Id_personal);
 
-                cmd.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
+			}
+			catch (Exception ex)
+			{
 
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-        public void MostrarPersonal(ref DataTable dt, int desde, int hasta)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlDataAdapter da = new SqlDataAdapter("mostrarPersonal", CONEXIONMAESTRA.conectar);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
-                da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
-                da.Fill(dt);
-            }
-            catch (Exception ex)
-            {
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+		public void BuscarPersonal(ref DataTable dt, int desde, int hasta,string buscador)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("BuscarPersonal", CONEXIONMAESTRA.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
+				da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
+				da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+		public void BuscarPersonalIdentidad(ref DataTable dt, string buscador)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("BuscarPersonalIdentidad", CONEXIONMAESTRA.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+		
 
-                MessageBox.Show(ex.StackTrace);
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-        public void BuscarPersonal(ref DataTable dt, int desde, int hasta, string buscador)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonal", CONEXIONMAESTRA.conectar);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
-                da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
-                da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
-                da.Fill(dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace);
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-        public void BuscarPersonalIdentidad(ref DataTable dt, string buscador)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonalIdentidad", CONEXIONMAESTRA.conectar);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
-                da.Fill(dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace);
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-        public void BuscarAsistenciasId(ref DataTable dt, int Idpersonal)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlDataAdapter da = new SqlDataAdapter("buscarAsistenciasId", CONEXIONMAESTRA.conectar);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@Idpersonal", Idpersonal);
-                da.Fill(dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace);
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-        public bool restaurar_personal(Lpersonal parametros)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlCommand cmd = new SqlCommand("restaurar_personal", CONEXIONMAESTRA.conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
+		public bool restaurar_personal(Lpersonal parametros)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("restaurar_personal", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Idpersonal", parametros.Id_personal); ;
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
 
-                cmd.Parameters.AddWithValue("@Idpersonal", parametros.Id_personal);
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+		public void ContarPersonal(ref int Contador)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("select Count(Id_personal) from Personal", CONEXIONMAESTRA.conectar);
+				Contador =Convert.ToInt32( cmd.ExecuteScalar());
+			}
+			catch (Exception )
+			{
+				Contador = 0;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
 
-                cmd.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-        public void ContarPersonal(ref int Contador)
-        {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlCommand cmd = new SqlCommand("select count(Id_personal) from Personal", CONEXIONMAESTRA.conectar);
-                Contador = Convert.ToInt32(cmd.ExecuteScalar());
-
-            }
-            catch (Exception)
-            {
-
-                Contador = 0;
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
-        }
-
-    }
+	}
 }
