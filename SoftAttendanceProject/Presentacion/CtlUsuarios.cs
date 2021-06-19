@@ -32,6 +32,8 @@ namespace SoftAttendanceProject.Presentacion
             txtnombre.Clear();
             txtcontraseña.Clear();
             txtusuario.Clear();
+            txtusuario.Enabled = true;
+            datalistadoModulos.Enabled = true;
         }
         private void habilitarPaneles()
         {
@@ -205,7 +207,7 @@ namespace SoftAttendanceProject.Presentacion
             ocultarPanelIconos();
         }
 
-      
+
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             Icono.Image = pictureBox8.Image;
@@ -223,7 +225,7 @@ namespace SoftAttendanceProject.Presentacion
             ocultarPanelIconos();
         }
 
-      
+
 
         private void CtlUsuarios_Load(object sender, EventArgs e)
         {
@@ -307,6 +309,16 @@ namespace SoftAttendanceProject.Presentacion
             capturarIdUsuario();
             txtnombre.Text = datalistadoUsuarios.SelectedCells[3].Value.ToString();
             txtusuario.Text = datalistadoUsuarios.SelectedCells[4].Value.ToString();
+            if (txtusuario.Text == "admin")
+            {
+                txtusuario.Enabled = false;
+                datalistadoModulos.Enabled = false;
+            }
+            else
+            {
+                txtusuario.Enabled = true;
+                datalistadoModulos.Enabled = true;
+            }
             txtcontraseña.Text = datalistadoUsuarios.SelectedCells[5].Value.ToString();
 
             Icono.BackgroundImage = null;
@@ -465,6 +477,9 @@ namespace SoftAttendanceProject.Presentacion
             }
         }
 
-     
+        private void datalistadoUsuarios_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

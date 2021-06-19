@@ -32,11 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstalacionBd));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Label66 = new System.Windows.Forms.Label();
+            this.PictureBox7 = new System.Windows.Forms.PictureBox();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.Panel9 = new System.Windows.Forms.Panel();
             this.lblbuscador_de_servidores = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnInstalarServidor = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel6 = new System.Windows.Forms.Panel();
             this.Panel7 = new System.Windows.Forms.Panel();
             this.Label5 = new System.Windows.Forms.Label();
@@ -45,6 +48,7 @@
             this.seg = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtusuario = new System.Windows.Forms.TextBox();
@@ -79,24 +83,20 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.TimerCRARINI = new System.Windows.Forms.Timer(this.components);
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.PictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
             this.Panel2.SuspendLayout();
             this.Panel9.SuspendLayout();
             this.Panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.Panel6.SuspendLayout();
             this.Panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.GroupBox6.SuspendLayout();
             this.Panel10.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,7 +105,7 @@
             this.panel1.Controls.Add(this.PictureBox7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1917, 111);
             this.panel1.TabIndex = 621;
@@ -119,16 +119,26 @@
             this.Label66.Location = new System.Drawing.Point(16, 39);
             this.Label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label66.Name = "Label66";
-            this.Label66.Size = new System.Drawing.Size(124, 29);
+            this.Label66.Size = new System.Drawing.Size(208, 29);
             this.Label66.TabIndex = 616;
-            this.Label66.Text = "Orus 369";
+            this.Label66.Text = "Soft Attendance";
+            // 
+            // PictureBox7
+            // 
+            this.PictureBox7.Location = new System.Drawing.Point(232, 4);
+            this.PictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox7.Name = "PictureBox7";
+            this.PictureBox7.Size = new System.Drawing.Size(95, 92);
+            this.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox7.TabIndex = 615;
+            this.PictureBox7.TabStop = false;
             // 
             // Panel2
             // 
             this.Panel2.Controls.Add(this.Panel9);
             this.Panel2.Controls.Add(this.btnInstalarServidor);
             this.Panel2.Location = new System.Drawing.Point(263, 118);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(647, 663);
             this.Panel2.TabIndex = 622;
@@ -138,7 +148,7 @@
             this.Panel9.Controls.Add(this.lblbuscador_de_servidores);
             this.Panel9.Controls.Add(this.panel3);
             this.Panel9.Location = new System.Drawing.Point(21, 132);
-            this.Panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel9.Margin = new System.Windows.Forms.Padding(4);
             this.Panel9.Name = "Panel9";
             this.Panel9.Size = new System.Drawing.Size(603, 188);
             this.Panel9.TabIndex = 619;
@@ -157,6 +167,16 @@
             this.lblbuscador_de_servidores.Text = "Buscando servidores instalados...";
             this.lblbuscador_de_servidores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(4, 188);
+            this.panel3.TabIndex = 615;
+            // 
             // btnInstalarServidor
             // 
             this.btnInstalarServidor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
@@ -166,13 +186,14 @@
             this.btnInstalarServidor.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
             this.btnInstalarServidor.ForeColor = System.Drawing.Color.White;
             this.btnInstalarServidor.Location = new System.Drawing.Point(39, 23);
-            this.btnInstalarServidor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInstalarServidor.Margin = new System.Windows.Forms.Padding(4);
             this.btnInstalarServidor.Name = "btnInstalarServidor";
             this.btnInstalarServidor.Size = new System.Drawing.Size(551, 103);
             this.btnInstalarServidor.TabIndex = 610;
             this.btnInstalarServidor.Text = "Instalar Servidor";
             this.btnInstalarServidor.UseVisualStyleBackColor = false;
             this.btnInstalarServidor.Visible = false;
+            this.btnInstalarServidor.Click += new System.EventHandler(this.btnInstalarServidor_Click);
             // 
             // Panel4
             // 
@@ -183,11 +204,24 @@
             this.Panel4.Controls.Add(this.PictureBox1);
             this.Panel4.Controls.Add(this.Panel5);
             this.Panel4.Location = new System.Drawing.Point(263, 250);
-            this.Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel4.Margin = new System.Windows.Forms.Padding(4);
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(643, 684);
             this.Panel4.TabIndex = 618;
             this.Panel4.Visible = false;
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
+            this.PictureBox2.Location = new System.Drawing.Point(0, 378);
+            this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(643, 306);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 617;
+            this.PictureBox2.TabStop = false;
             // 
             // Panel6
             // 
@@ -195,7 +229,7 @@
             this.Panel6.Controls.Add(this.Label2);
             this.Panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel6.Location = new System.Drawing.Point(0, 299);
-            this.Panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel6.Margin = new System.Windows.Forms.Padding(4);
             this.Panel6.Name = "Panel6";
             this.Panel6.Size = new System.Drawing.Size(643, 79);
             this.Panel6.TabIndex = 620;
@@ -209,7 +243,7 @@
             this.Panel7.Controls.Add(this.seg);
             this.Panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel7.Location = new System.Drawing.Point(373, 0);
-            this.Panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel7.Margin = new System.Windows.Forms.Padding(4);
             this.Panel7.Name = "Panel7";
             this.Panel7.Size = new System.Drawing.Size(270, 79);
             this.Panel7.TabIndex = 619;
@@ -291,12 +325,25 @@
     "do este todo Listo";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // PictureBox1
+            // 
+            this.PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(0, 16);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(643, 70);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 604;
+            this.PictureBox1.TabStop = false;
+            // 
             // Panel5
             // 
             this.Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel5.Location = new System.Drawing.Point(0, 0);
-            this.Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel5.Margin = new System.Windows.Forms.Padding(4);
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(643, 16);
             this.Panel5.TabIndex = 618;
@@ -319,7 +366,7 @@
             this.panel8.Controls.Add(this.Label6);
             this.panel8.Controls.Add(this.Label8);
             this.panel8.Location = new System.Drawing.Point(920, 118);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(981, 742);
             this.panel8.TabIndex = 623;
@@ -328,12 +375,12 @@
             // txtusuario
             // 
             this.txtusuario.Location = new System.Drawing.Point(192, 52);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtusuario.MaxLength = 15;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(177, 22);
             this.txtusuario.TabIndex = 635;
-            this.txtusuario.Text = "Reveaya";
+            this.txtusuario.Text = "SA_USER";
             this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             // 
             // Label15
@@ -352,9 +399,9 @@
             this.GroupBox6.Controls.Add(this.txtCrearUsuarioDb);
             this.GroupBox6.ForeColor = System.Drawing.Color.White;
             this.GroupBox6.Location = new System.Drawing.Point(653, 234);
-            this.GroupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox6.Name = "GroupBox6";
-            this.GroupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox6.Size = new System.Drawing.Size(311, 374);
             this.GroupBox6.TabIndex = 632;
             this.GroupBox6.TabStop = false;
@@ -364,7 +411,7 @@
             // 
             this.txtCrearUsuarioDb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtCrearUsuarioDb.Location = new System.Drawing.Point(4, 48);
-            this.txtCrearUsuarioDb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCrearUsuarioDb.Margin = new System.Windows.Forms.Padding(4);
             this.txtCrearUsuarioDb.Multiline = true;
             this.txtCrearUsuarioDb.Name = "txtCrearUsuarioDb";
             this.txtCrearUsuarioDb.Size = new System.Drawing.Size(303, 322);
@@ -375,7 +422,7 @@
             // 
             this.txtArgumentosini.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArgumentosini.Location = new System.Drawing.Point(37, 455);
-            this.txtArgumentosini.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtArgumentosini.Margin = new System.Windows.Forms.Padding(4);
             this.txtArgumentosini.Name = "txtArgumentosini";
             this.txtArgumentosini.Size = new System.Drawing.Size(593, 265);
             this.txtArgumentosini.TabIndex = 589;
@@ -394,7 +441,7 @@
             this.Panel10.Controls.Add(this.seg3);
             this.Panel10.Controls.Add(this.mil3);
             this.Panel10.Location = new System.Drawing.Point(457, 5);
-            this.Panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel10.Margin = new System.Windows.Forms.Padding(4);
             this.Panel10.Name = "Panel10";
             this.Panel10.Size = new System.Drawing.Size(443, 210);
             this.Panel10.TabIndex = 608;
@@ -405,9 +452,9 @@
             this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.ForeColor = System.Drawing.Color.White;
             this.GroupBox1.Location = new System.Drawing.Point(4, 9);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Size = new System.Drawing.Size(421, 190);
             this.GroupBox1.TabIndex = 608;
             this.GroupBox1.TabStop = false;
@@ -418,7 +465,7 @@
             this.txtEliminarBase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEliminarBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEliminarBase.Location = new System.Drawing.Point(4, 20);
-            this.txtEliminarBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEliminarBase.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarBase.Name = "txtEliminarBase";
             this.txtEliminarBase.Size = new System.Drawing.Size(413, 166);
             this.txtEliminarBase.TabIndex = 589;
@@ -530,9 +577,9 @@
             this.GroupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox2.ForeColor = System.Drawing.Color.White;
             this.GroupBox2.Location = new System.Drawing.Point(37, 223);
-            this.GroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Size = new System.Drawing.Size(595, 225);
             this.GroupBox2.TabIndex = 622;
             this.GroupBox2.TabStop = false;
@@ -542,7 +589,7 @@
             // 
             this.txtCrear_procedimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCrear_procedimientos.Location = new System.Drawing.Point(8, 39);
-            this.txtCrear_procedimientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCrear_procedimientos.Margin = new System.Windows.Forms.Padding(4);
             this.txtCrear_procedimientos.Name = "txtCrear_procedimientos";
             this.txtCrear_procedimientos.Size = new System.Drawing.Size(577, 178);
             this.txtCrear_procedimientos.TabIndex = 589;
@@ -551,7 +598,7 @@
             // txtnombre_scrypt
             // 
             this.txtnombre_scrypt.Location = new System.Drawing.Point(192, 183);
-            this.txtnombre_scrypt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnombre_scrypt.Margin = new System.Windows.Forms.Padding(4);
             this.txtnombre_scrypt.Name = "txtnombre_scrypt";
             this.txtnombre_scrypt.Size = new System.Drawing.Size(176, 22);
             this.txtnombre_scrypt.TabIndex = 621;
@@ -560,16 +607,16 @@
             // TXTbasededatos
             // 
             this.TXTbasededatos.Location = new System.Drawing.Point(192, 138);
-            this.TXTbasededatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXTbasededatos.Margin = new System.Windows.Forms.Padding(4);
             this.TXTbasededatos.Name = "TXTbasededatos";
             this.TXTbasededatos.Size = new System.Drawing.Size(177, 22);
             this.TXTbasededatos.TabIndex = 621;
-            this.TXTbasededatos.Text = "SOFT_ATTENDACE";
+            this.TXTbasededatos.Text = "SOFT_ATTENDANCE";
             // 
             // lblcontraseña
             // 
             this.lblcontraseña.Location = new System.Drawing.Point(192, 94);
-            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(4);
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(177, 22);
             this.lblcontraseña.TabIndex = 621;
@@ -578,13 +625,12 @@
             // lblnombredeservicio
             // 
             this.lblnombredeservicio.Location = new System.Drawing.Point(192, 14);
-            this.lblnombredeservicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblnombredeservicio.Margin = new System.Windows.Forms.Padding(4);
             this.lblnombredeservicio.MaxLength = 15;
             this.lblnombredeservicio.Name = "lblnombredeservicio";
             this.lblnombredeservicio.Size = new System.Drawing.Size(177, 22);
             this.lblnombredeservicio.TabIndex = 621;
-            this.lblnombredeservicio.Text = "MSSQLSERVER";
-            this.lblnombredeservicio.TextChanged += new System.EventHandler(this.lblnombredeservicio_TextChanged);
+            this.lblnombredeservicio.Text = "SQLEXPRESS";
             // 
             // Label11
             // 
@@ -644,64 +690,22 @@
             // timer2
             // 
             this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer3
             // 
             this.timer3.Interval = 10;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // timer4
             // 
             this.timer4.Interval = 10;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // TimerCRARINI
             // 
             this.TimerCRARINI.Interval = 10;
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(0, 378);
-            this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(643, 306);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 617;
-            this.PictureBox2.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(0, 16);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(643, 70);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 604;
-            this.PictureBox1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(4, 188);
-            this.panel3.TabIndex = 615;
-            // 
-            // PictureBox7
-            // 
-            this.PictureBox7.Location = new System.Drawing.Point(147, 10);
-            this.PictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox7.Name = "PictureBox7";
-            this.PictureBox7.Size = new System.Drawing.Size(95, 92);
-            this.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox7.TabIndex = 615;
-            this.PictureBox7.TabStop = false;
+            this.TimerCRARINI.Tick += new System.EventHandler(this.TimerCRARINI_Tick);
             // 
             // InstalacionBd
             // 
@@ -713,18 +717,23 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InstalacionBd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InstalacionBd";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InstalacionBd_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
             this.Panel2.ResumeLayout(false);
             this.Panel9.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.Panel6.ResumeLayout(false);
             this.Panel7.ResumeLayout(false);
             this.Panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.GroupBox6.ResumeLayout(false);
@@ -733,9 +742,6 @@
             this.Panel10.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }

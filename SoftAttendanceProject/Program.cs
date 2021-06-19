@@ -15,7 +15,7 @@ namespace SoftAttendanceProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Presentacion.MenuPrincipal frm = new Presentacion.MenuPrincipal();
+            Presentacion.Login frm = new Presentacion.Login();
             frm.FormClosed += Frm_FormClosed;
             frm.ShowDialog();
             Application.Run();

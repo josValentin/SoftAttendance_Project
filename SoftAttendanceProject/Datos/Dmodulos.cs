@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using SoftAttendanceProject.Logica;
 
 namespace SoftAttendanceProject.Datos
 {
 	public class Dmodulos
 	{
-		public void mostrar_Modulos(ref DataTable dt)
+        public void mostrar_Modulos(ref DataTable dt)
 		{
 			try
 			{
@@ -29,5 +30,27 @@ namespace SoftAttendanceProject.Datos
 			}
 
 		}
+        public bool Insertar_Modulos(Lmodulos parametros)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("Insertar_Modulos", CONEXIONMAESTRA.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Modulo", parametros.Modulo);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return true;
+
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
 	}
 }

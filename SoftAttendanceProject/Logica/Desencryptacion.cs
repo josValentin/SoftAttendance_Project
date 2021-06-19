@@ -10,7 +10,8 @@ namespace SoftAttendanceProject.Logica
         static private AES aes = new AES();
         static public string CnString;
         static string dbcnString;
-        static public string appPwdUnique = "Orus369.codigo369";
+        //static public string appPwdUnique = "Orus369.codigo369";
+        static public string appPwdUnique = "SoftAttendance.codigoSA";
         public static object checkServer()
         {
             XmlDocument doc = new XmlDocument();

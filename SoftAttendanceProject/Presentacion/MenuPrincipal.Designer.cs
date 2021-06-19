@@ -33,12 +33,6 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.btnEstaciones = new System.Windows.Forms.Button();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnRespaldos = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -58,9 +52,8 @@
             this.btnPersonal = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.Icono = new System.Windows.Forms.PictureBox();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.panelbienvenida = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,14 +61,12 @@
             this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel18.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.PanelPadre.SuspendLayout();
             this.panelbienvenida.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +88,6 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.panel17);
-            this.panel4.Controls.Add(this.panel18);
             this.panel4.Controls.Add(this.panel14);
             this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.panel8);
@@ -113,12 +103,11 @@
             // 
             this.panel17.Controls.Add(this.label1);
             this.panel17.Controls.Add(this.pictureBox1);
-            this.panel17.Controls.Add(this.panel22);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(0, 375);
+            this.panel17.Location = new System.Drawing.Point(0, 300);
             this.panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(199, 187);
+            this.panel17.Size = new System.Drawing.Size(199, 262);
             this.panel17.TabIndex = 4;
             // 
             // label1
@@ -126,7 +115,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 111);
+            this.label1.Location = new System.Drawing.Point(0, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 34);
             this.label1.TabIndex = 2;
@@ -136,83 +125,13 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::SoftAttendanceProject.Properties.Resources.Logo_SoftAttendance;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(199, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel22
-            // 
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel22.Location = new System.Drawing.Point(0, 0);
-            this.panel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(199, 14);
-            this.panel22.TabIndex = 0;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.btnEstaciones);
-            this.panel18.Controls.Add(this.panel21);
-            this.panel18.Controls.Add(this.panel19);
-            this.panel18.Controls.Add(this.panel20);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel18.Location = new System.Drawing.Point(0, 300);
-            this.panel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(199, 75);
-            this.panel18.TabIndex = 5;
-            // 
-            // btnEstaciones
-            // 
-            this.btnEstaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.btnEstaciones.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.naranja1;
-            this.btnEstaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEstaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEstaciones.FlatAppearance.BorderSize = 0;
-            this.btnEstaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstaciones.ForeColor = System.Drawing.Color.White;
-            this.btnEstaciones.Image = global::SoftAttendanceProject.Properties.Resources.puesta_en_marcha;
-            this.btnEstaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstaciones.Location = new System.Drawing.Point(17, 14);
-            this.btnEstaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEstaciones.Name = "btnEstaciones";
-            this.btnEstaciones.Size = new System.Drawing.Size(171, 61);
-            this.btnEstaciones.TabIndex = 2;
-            this.btnEstaciones.Text = "Estaciones";
-            this.btnEstaciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEstaciones.UseVisualStyleBackColor = false;
-            // 
-            // panel21
-            // 
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel21.Location = new System.Drawing.Point(188, 14);
-            this.panel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(11, 61);
-            this.panel21.TabIndex = 3;
-            // 
-            // panel19
-            // 
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel19.Location = new System.Drawing.Point(0, 14);
-            this.panel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(17, 61);
-            this.panel19.TabIndex = 1;
-            // 
-            // panel20
-            // 
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(199, 14);
-            this.panel20.TabIndex = 0;
             // 
             // panel14
             // 
@@ -448,9 +367,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.lblLogin);
+            this.panel3.Controls.Add(this.Icono);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -458,37 +376,27 @@
             this.panel3.Size = new System.Drawing.Size(199, 74);
             this.panel3.TabIndex = 0;
             // 
-            // label2
+            // lblLogin
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 74);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "SoftAttendance";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.Location = new System.Drawing.Point(52, 0);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(147, 74);
+            this.lblLogin.TabIndex = 3;
+            this.lblLogin.Text = "SoftAttendance";
+            this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // Icono
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 74);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 74);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.Icono.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Icono.Location = new System.Drawing.Point(0, 0);
+            this.Icono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(52, 74);
+            this.Icono.TabIndex = 0;
+            this.Icono.TabStop = false;
             // 
             // PanelPadre
             // 
@@ -539,14 +447,12 @@
             this.panel4.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel18.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.PanelPadre.ResumeLayout(false);
             this.panelbienvenida.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -577,19 +483,12 @@
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Button btnEstaciones;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Panel panelbienvenida;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.PictureBox Icono;
     }
 }

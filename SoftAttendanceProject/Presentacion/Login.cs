@@ -32,7 +32,17 @@ namespace SoftAttendanceProject.Presentacion
             VerificarConexion();
             if (Indicador == "Correcto")
             {
-                DibujarUsuarios();
+                MostrarUsuarios();
+                if(Contador == 0)
+                {
+                    Dispose();
+                    UsuarioPrincipal from = new UsuarioPrincipal();
+                    from.ShowDialog();
+                }
+                else
+                {
+                    DibujarUsuarios();
+                }
             }
             else
             {
@@ -40,6 +50,14 @@ namespace SoftAttendanceProject.Presentacion
                 ElecccionServidor frm = new ElecccionServidor();
                 frm.ShowDialog();
             }
+        }
+
+        private void MostrarUsuarios()
+        {
+            DataTable dt = new DataTable();
+            Dusuarios funcion = new Dusuarios();
+            funcion.mostrar_Usuarios(ref dt);
+            Contador = dt.Rows.Count;
         }
 
 
@@ -94,7 +112,6 @@ namespace SoftAttendanceProject.Presentacion
 
                     flowLayoutPanel1.Controls.Add(p1);
 
-                    b.Click += mieventoLabel;
                     I1.Click += miEventoImagen;
                 }
             }
@@ -108,14 +125,10 @@ namespace SoftAttendanceProject.Presentacion
         private void miEventoImagen(object sender, EventArgs e)
         {
             Usuario = Convert.ToString(((PictureBox)sender).Tag);
+            Icono.Image = ((PictureBox)sender).Image;
             MostrarPanelPass();
         }
 
-        private void mieventoLabel(object sender, EventArgs e)
-        {
-            Usuario = ((Label)sender).Text;
-            MostrarPanelPass();
-        }
         private void MostrarPanelPass()
         {
             PanelIngreso_de_contraseña.Visible = true;
@@ -138,6 +151,9 @@ namespace SoftAttendanceProject.Presentacion
             {
                 Dispose();
                 MenuPrincipal frm = new MenuPrincipal();
+                frm.Idusuario = Idusuario;
+                frm.LoginV = Usuario;
+                frm.Icono.Image = Icono.Image;
                 frm.ShowDialog();
             }
         }

@@ -55,16 +55,19 @@
             this.PanelUsuarios = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Label();
+            this.Icono = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
             this.PanelIngreso_de_contraseña.SuspendLayout();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.PanelUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Icono);
             this.panel1.Controls.Add(this.Label66);
             this.panel1.Controls.Add(this.PictureBox7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -500,7 +503,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(617, 288);
             this.flowLayoutPanel1.TabIndex = 617;
-           
             // 
             // panel2
             // 
@@ -515,7 +517,14 @@
             this.panel2.TabIndex = 616;
             this.panel2.Text = "¿Quién está iniciando Sesión?";
             this.panel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
+            // 
+            // Icono
+            // 
+            this.Icono.Location = new System.Drawing.Point(520, 30);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(40, 38);
+            this.Icono.TabIndex = 617;
+            this.Icono.TabStop = false;
             // 
             // Login
             // 
@@ -540,6 +549,7 @@
             this.panel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.PanelUsuarios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,5 +582,6 @@
         private System.Windows.Forms.Panel PanelUsuarios;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         internal System.Windows.Forms.Label panel2;
+        private System.Windows.Forms.PictureBox Icono;
     }
 }
