@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Icono = new System.Windows.Forms.PictureBox();
             this.Label66 = new System.Windows.Forms.Label();
             this.PictureBox7 = new System.Windows.Forms.PictureBox();
             this.PanelIngreso_de_contraseña = new System.Windows.Forms.Panel();
@@ -55,14 +56,13 @@
             this.PanelUsuarios = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Label();
-            this.Icono = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
             this.PanelIngreso_de_contraseña.SuspendLayout();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.PanelUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,6 +76,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1404, 111);
             this.panel1.TabIndex = 619;
+            // 
+            // Icono
+            // 
+            this.Icono.Location = new System.Drawing.Point(520, 30);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(40, 38);
+            this.Icono.TabIndex = 617;
+            this.Icono.TabStop = false;
             // 
             // Label66
             // 
@@ -133,6 +141,7 @@
             this.btncambioUsuario.TabIndex = 622;
             this.btncambioUsuario.Text = "Cambiar de Usuario";
             this.btncambioUsuario.UseVisualStyleBackColor = false;
+            this.btncambioUsuario.Click += new System.EventHandler(this.btncambioUsuario_Click);
             // 
             // btn_insertar
             // 
@@ -518,14 +527,6 @@
             this.panel2.Text = "¿Quién está iniciando Sesión?";
             this.panel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Icono
-            // 
-            this.Icono.Location = new System.Drawing.Point(520, 30);
-            this.Icono.Name = "Icono";
-            this.Icono.Size = new System.Drawing.Size(40, 38);
-            this.Icono.TabIndex = 617;
-            this.Icono.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -543,13 +544,13 @@
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
             this.PanelIngreso_de_contraseña.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.PanelUsuarios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.ResumeLayout(false);
 
         }

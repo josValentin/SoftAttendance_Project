@@ -716,6 +716,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CtlUsuarios";
             this.Size = new System.Drawing.Size(1396, 924);
+            this.Load += new System.EventHandler(this.CtlUsuarios_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -89,5 +89,12 @@ namespace SoftAttendanceProject.Presentacion
             control.Dock = DockStyle.Fill;
             PanelPadre.Controls.Add(control);
         }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            TomarAsistencias frm = new TomarAsistencias();
+            frm.ShowDialog();
+        }
     }
 }

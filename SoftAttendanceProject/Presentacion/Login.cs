@@ -229,5 +229,11 @@ namespace SoftAttendanceProject.Presentacion
                 txtcontraseña.Text = txtcontraseña.Text.Substring(0, txtcontraseña.Text.Count() - 1);
             }
         }
+
+        private void btncambioUsuario_Click(object sender, EventArgs e)
+        {
+            PanelUsuarios.Visible = true;
+            PanelUsuarios.Dock = DockStyle.Fill;
+        }
     }
 }

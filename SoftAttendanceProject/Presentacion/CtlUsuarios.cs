@@ -250,33 +250,7 @@ namespace SoftAttendanceProject.Presentacion
 
         private void datalistadoUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == datalistadoUsuarios.Columns["Editar"].Index)
-            {
-                obtenerEstado();
-                if (estado == "ELIMINADO")
-                {
-                    DialogResult resultado = MessageBox.Show("Este Usuario se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (resultado == DialogResult.OK)
-                    {
-                        RestaurarUsuario();
-                    }
-                }
-                else
-                {
-                    ObtenerDatos();
-                }
-
-            }
-            if (e.ColumnIndex == datalistadoUsuarios.Columns["Eliminar"].Index)
-            {
-                DialogResult resultado = MessageBox.Show("¿Realmente desea eliminar este Registro?", "Eliminando registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (resultado == DialogResult.OK)
-                {
-                    capturarIdUsuario();
-                    EliminarUsuarios();
-                }
-
-            }
+           
         }
         private void RestaurarUsuario()
         {
@@ -479,7 +453,38 @@ namespace SoftAttendanceProject.Presentacion
 
         private void datalistadoUsuarios_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == datalistadoUsuarios.Columns["Editar"].Index)
+            {
+                obtenerEstado();
+                if (estado == "ELIMINADO")
+                {
+                    DialogResult resultado = MessageBox.Show("Este Usuario se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.OK)
+                    {
+                        RestaurarUsuario();
+                    }
+                }
+                else
+                {
+                    ObtenerDatos();
+                }
 
+            }
+            if (e.ColumnIndex == datalistadoUsuarios.Columns["Eliminar"].Index)
+            {
+                DialogResult resultado = MessageBox.Show("¿Realmente desea eliminar este Registro?", "Eliminando registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (resultado == DialogResult.OK)
+                {
+                    capturarIdUsuario();
+                    EliminarUsuarios();
+                }
+
+            }
+        }
+
+        private void CtlUsuarios_Load_1(object sender, EventArgs e)
+        {
+            MostrarUsuarios();
         }
     }
 }
