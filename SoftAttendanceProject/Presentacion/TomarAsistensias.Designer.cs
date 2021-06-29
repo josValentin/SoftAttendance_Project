@@ -106,6 +106,7 @@
             // BtnIniciarSesion
             // 
             this.BtnIniciarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.BtnIniciarSesion.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.naranja;
             this.BtnIniciarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnIniciarSesion.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -121,6 +122,7 @@
             this.BtnIniciarSesion.TabIndex = 610;
             this.BtnIniciarSesion.Text = "Iniciar Sesion";
             this.BtnIniciarSesion.UseVisualStyleBackColor = false;
+            this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
             // 
             // Panel13
             // 

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\SoftAttendanceProject.csproj" />
+  <event action="Analyze" type="Success" name="ElecccionServidor.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Presentacion\AsistenteInstalacion\ElecccionServidor.resx" />
+  <event action="Analyze" type="Success" name="InstalacionBd.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Presentacion\AsistenteInstalacion\InstalacionBd.resx" />
+  <event action="Analyze" type="Success" name="UsuarioPrincipal.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Presentacion\AsistenteInstalacion\UsuarioPrincipal.resx" />
+  <event action="Analyze" type="Success" name="CtlUsuarios.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Presentacion\CtlUsuarios.resx" />
+  <event action="Analyze" type="Success" name="Login.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Presentacion\Login.resx" />
+  <event action="Analyze" type="Success" name="MenuPrincipal.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Presentacion\MenuPrincipal.resx" />
+  <event action="Analyze" type="Success" name="Personal.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Presentacion\Personal.resx" />
+  <event action="Analyze" type="Success" name="TomarAsistensias.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Presentacion\TomarAsistensias.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="SoftAttendanceProject" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\SoftAttendanceProject.csproj" />
+  <event action="Analyze" type="Success" name="SoftAttendanceProject" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject.sln" />
+  <event action="Backup" type="Success" name="SoftAttendanceProject" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\SoftAttendanceProject.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\SoftAttendanceProject.csproj" />
+  <event action="Upgrade" type="Success" name="SoftAttendanceProject" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject\SoftAttendanceProject.csproj" />
+  <event action="Upgrade" type="Success" name="SoftAttendanceProject" path="C:\Users\USER\source\repos\josValentin\SoftAttendance_Project\SoftAttendanceProject.sln" />
+</log>

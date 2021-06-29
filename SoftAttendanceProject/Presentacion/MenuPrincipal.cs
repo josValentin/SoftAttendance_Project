@@ -70,7 +70,10 @@ namespace SoftAttendanceProject.Presentacion
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-
+            PanelPadre.Controls.Clear();
+            Preplanilla control = new Preplanilla();
+            control.Dock = DockStyle.Fill;
+            PanelPadre.Controls.Add(control);
         }
 
         private void btnPersonal_Click(object sender, EventArgs e)
