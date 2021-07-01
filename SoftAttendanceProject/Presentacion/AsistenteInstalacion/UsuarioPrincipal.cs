@@ -63,6 +63,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
             parametros.Icono = ms.GetBuffer();
             if(funcion.InsertarUsuarios(parametros) == true)
             {
+                InsertarCopiasBd();
                 Insertar_Modulos();
                 ObtenerIdUsusario();
                 InsertarPermisos();
@@ -88,6 +89,12 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
             Dispose();
             Login frm = new Login();
             frm.ShowDialog();
+        }
+
+        private void InsertarCopiasBd()
+        {
+            DcopiasBd funcion = new DcopiasBd();
+            funcion.InsertarCopiasBd();
         }
 
         private void ObtenerIdUsusario()

@@ -55,10 +55,12 @@
     <Compile Include="Datos\CONEXIONMAESTRA.cs" />
     <Compile Include="Datos\Dasistencias.cs" />
     <Compile Include="Datos\Dcargos.cs" />
+    <Compile Include="Datos\DcopiasBd.cs" />
     <Compile Include="Datos\Dmodulos.cs" />
     <Compile Include="Datos\Dpermisos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
     <Compile Include="Datos\Dusuarios.cs" />
+    <Compile Include="Logica\Lcopiasbd.cs" />
     <Compile Include="Presentacion\AsistenteInstalacion\ConexionRemota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +94,12 @@
     <Compile Include="Presentacion\AsistenteInstalacion\UsuarioPrincipal.Designer.cs">
       <DependentUpon>UsuarioPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\CopiasBd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CopiasBd.Designer.cs">
+      <DependentUpon>CopiasBd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\CtlUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +124,18 @@
     <Compile Include="Presentacion\Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Preplanilla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Preplanilla.designer.cs">
+      <DependentUpon>Preplanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ReportAsistencias.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ReportAsistencias.Designer.cs">
+      <DependentUpon>ReportAsistencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\TomarAsistensias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +144,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.AsistenteInstalacion.ElecccionServidor.resources" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.AsistenteInstalacion.InstalacionBd.resources" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.AsistenteInstalacion.UsuarioPrincipal.resources" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.CtlUsuarios.resources" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.MenuPrincipal.resources" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.Personal.resources" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.TomarAsistencias.resources" />
+    <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Properties.Resources.resources" />
     <EmbeddedResource Include="Presentacion\AsistenteInstalacion\ElecccionServidor.resx">
       <DependentUpon>ElecccionServidor.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\AsistenteInstalacion\UsuarioPrincipal.resx">
       <DependentUpon>UsuarioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CopiasBd.resx">
+      <DependentUpon>CopiasBd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\CtlUsuarios.resx">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
@@ -145,13 +177,30 @@
     <EmbeddedResource Include="Presentacion\Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Preplanilla.resx">
+      <DependentUpon>Preplanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ReportAsistencias.resx">
+      <DependentUpon>ReportAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\TomarAsistensias.resx">
       <DependentUpon>TomarAsistensias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\SoftAttendanceProject.exe.config" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\SoftAttendanceProject.csproj.App.config" />
+    <None Include="obj\Debug\SoftAttendanceProject.csproj.CopyComplete" />
+    <None Include="obj\Debug\SoftAttendanceProject.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\SoftAttendanceProject.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\SoftAttendanceProject.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\SoftAttendanceProject.csproj.CoreCompileInputs.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,8 +218,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\ConnectionString.xml" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\SoftAttendanceProject.exe" />
+    <Content Include="bin\Debug\SoftAttendanceProject.pdb" />
+    <Content Include="bin\Debug\SQLEXPR_x86_ENU.exe" />
+    <Content Include="bin\Debug\System.IO.dll" />
+    <Content Include="bin\Debug\System.IO.xml" />
+    <Content Include="bin\Debug\System.Net.Http.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Extensions.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Extensions.xml" />
+    <Content Include="bin\Debug\System.Net.Http.Primitives.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Primitives.xml" />
+    <Content Include="bin\Debug\System.Net.Http.WebRequest.dll" />
+    <Content Include="bin\Debug\System.Net.Http.WebRequest.xml" />
+    <Content Include="bin\Debug\System.Net.Http.xml" />
+    <Content Include="bin\Debug\System.Runtime.dll" />
+    <Content Include="bin\Debug\System.Runtime.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.xml" />
+    <Content Include="obj\Debug\SoftAttendanceProject.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SoftAttendanceProject.exe" />
+    <Content Include="obj\Debug\SoftAttendanceProject.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources1.Designer.cs.dll" />
     <Content Include="Resources\animal.png" />
     <Content Include="Resources\azul.png" />
+    <Content Include="SQL_Script\SqlScript.sql" />
     <None Include="Resources\X.png" />
     <None Include="Resources\lapiz.png" />
     <None Include="Resources\back.png" />
@@ -218,6 +293,9 @@
     <Content Include="Resources\Trinaranja.png" />
     <Content Include="Resources\verde.png" />
     <Content Include="Resources\volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

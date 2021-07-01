@@ -57,6 +57,7 @@
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.panelbienvenida = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.dlg = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -163,6 +164,7 @@
             this.btnRespaldos.Text = "Respaldos";
             this.btnRespaldos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRespaldos.UseVisualStyleBackColor = false;
+            this.btnRespaldos.Click += new System.EventHandler(this.btnRespaldos_Click);
             // 
             // panel15
             // 
@@ -212,6 +214,7 @@
             this.btnRestaurar.Text = "Restaurar Bd";
             this.btnRestaurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRestaurar.UseVisualStyleBackColor = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // panel12
             // 
@@ -396,6 +399,7 @@
             this.Icono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Icono.Name = "Icono";
             this.Icono.Size = new System.Drawing.Size(52, 74);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Icono.TabIndex = 0;
             this.Icono.TabStop = false;
             // 
@@ -430,6 +434,10 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Bienvenido a SoftAttendance";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dlg
+            // 
+            this.dlg.FileName = "openFileDialog1";
             // 
             // MenuPrincipal
             // 
@@ -491,5 +499,6 @@
         private System.Windows.Forms.Panel panelbienvenida;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.PictureBox Icono;
+        private System.Windows.Forms.OpenFileDialog dlg;
     }
 }
