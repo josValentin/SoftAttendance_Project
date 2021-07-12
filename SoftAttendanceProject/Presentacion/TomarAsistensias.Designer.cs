@@ -51,6 +51,7 @@
             this.DataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.TXTIDPERSONAL = new System.Windows.Forms.Label();
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
+            this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.txtaviso = new System.Windows.Forms.Label();
             this.lblfecha = new System.Windows.Forms.Label();
@@ -59,13 +60,12 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelObservacion = new System.Windows.Forms.Panel();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.txtObservacion = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
-            this.PictureBox4 = new System.Windows.Forms.PictureBox();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel6.SuspendLayout();
             this.Panel9.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -75,9 +75,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoacumuladohorASDIA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadohoras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoasistencia)).BeginInit();
-            this.panelObservacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
+            this.panelObservacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel6
@@ -106,7 +106,6 @@
             // BtnIniciarSesion
             // 
             this.BtnIniciarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.BtnIniciarSesion.BackgroundImage = global::SoftAttendanceProject.Properties.Resources.naranja;
             this.BtnIniciarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnIniciarSesion.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -396,6 +395,16 @@
             this.txtIdentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIdentificacion.TextChanged += new System.EventHandler(this.txtIdentificacion_TextChanged);
             // 
+            // PictureBox4
+            // 
+            this.PictureBox4.Location = new System.Drawing.Point(816, 670);
+            this.PictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox4.Name = "PictureBox4";
+            this.PictureBox4.Size = new System.Drawing.Size(113, 89);
+            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox4.TabIndex = 459;
+            this.PictureBox4.TabStop = false;
+            // 
             // Label8
             // 
             this.Label8.Dock = System.Windows.Forms.DockStyle.Top;
@@ -497,6 +506,17 @@
             this.Label5.TabIndex = 338;
             this.Label5.Text = "Identificacion:";
             // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(799, 281);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 459;
+            this.PictureBox2.TabStop = false;
+            // 
             // panelObservacion
             // 
             this.panelObservacion.Controls.Add(this.btnConfirmar);
@@ -560,28 +580,6 @@
             this.timerHora.Enabled = true;
             this.timerHora.Tick += new System.EventHandler(this.timerHora_Tick);
             // 
-            // PictureBox4
-            // 
-            this.PictureBox4.Location = new System.Drawing.Point(816, 670);
-            this.PictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox4.Name = "PictureBox4";
-            this.PictureBox4.Size = new System.Drawing.Size(113, 89);
-            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox4.TabIndex = 459;
-            this.PictureBox4.TabStop = false;
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PictureBox2.Image = global::SoftAttendanceProject.Properties.Resources.Logo_SoftAttendance1;
-            this.PictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(799, 281);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 459;
-            this.PictureBox2.TabStop = false;
-            // 
             // TomarAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -594,6 +592,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TomarAsistencias";
             this.Text = "TomarAsistencias";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TomarAsistencias_Load);
             this.Panel6.ResumeLayout(false);
             this.Panel9.ResumeLayout(false);
@@ -606,9 +605,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoacumuladohorASDIA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadohoras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoasistencia)).EndInit();
-            this.panelObservacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
+            this.panelObservacion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

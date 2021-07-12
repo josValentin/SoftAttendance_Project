@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
 using System.Xml;
 using SoftAttendanceProject.Logica;
 using System.IO;
@@ -48,7 +47,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
         }
         private void Conectar()
         {
-            if(btnInstalarServidor.Visible == true)
+            if (btnInstalarServidor.Visible == true)
             {
                 comprobar_si_hay_servidor_instalado_SQL_NORMAL();
             }
@@ -104,7 +103,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
             }
             finally
             {
-                if(myConn.State ==ConnectionState.Open)
+                if (myConn.State == ConnectionState.Open)
                 {
                     myConn.Close();
                 }
@@ -163,7 +162,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
                 //    sw.Close();
                 //}
 
-                if(File.Exists(ruta))
+                if (File.Exists(ruta))
                     File.Delete(ruta);
 
                 sw = File.CreateText(ruta);
@@ -171,7 +170,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
                 sw.Flush();
                 sw.Close();
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
@@ -186,7 +185,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
             catch (Exception)
             {
 
-                
+
             }
         }
 
@@ -208,7 +207,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
             timer3.Stop();
             milisegundo += 1;
             mil3.Text = milisegundo.ToString();
-            if(milisegundo == 60)
+            if (milisegundo == 60)
             {
                 segundos += 1;
                 seg3.Text = segundos.ToString();
@@ -273,7 +272,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
             StreamWriter sw;
             rutaPREPARAR = Path.Combine(Directory.GetCurrentDirectory(), "ConfigurationFile.ini");
             rutaPREPARAR = rutaPREPARAR.Replace("ConfigurationFile.ini", @"SQLEXPR_x86_ENU\ConfigurationFile.ini");
-            if(File.Exists(rutaPREPARAR) == true)
+            if (File.Exists(rutaPREPARAR) == true)
             {
                 TimerCRARINI.Stop();
             }
@@ -290,7 +289,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
                 catch (Exception ex)
                 {
 
-                   
+
                 }
             }
 
@@ -300,19 +299,19 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
         {
             milisegundo1 += 1;
             milise.Text = Convert.ToString(milisegundo1);
-            if(milisegundo1 == 60)
+            if (milisegundo1 == 60)
             {
                 segundos1 += 1;
                 seg.Text = Convert.ToString(segundos1);
                 milisegundo1 = 0;
             }
-            if(segundos1 == 60)
+            if (segundos1 == 60)
             {
                 minutos1 += 1;
                 min.Text = Convert.ToString(minutos1);
                 segundos1 = 0;
             }
-            if(minutos1 == 6)
+            if (minutos1 == 6)
             {
                 timer2.Stop();
                 ejecutar_scryt_ELIMINARBase();

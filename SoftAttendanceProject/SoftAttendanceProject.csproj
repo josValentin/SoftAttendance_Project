@@ -31,6 +31,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Soft_Attendance.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo_SoftAttendance.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -153,6 +159,9 @@
     <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.Personal.resources" />
     <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Presentacion.TomarAsistencias.resources" />
     <EmbeddedResource Include="obj\Debug\SoftAttendanceProject.Properties.Resources.resources" />
+    <EmbeddedResource Include="Presentacion\AsistenteInstalacion\ConexionRemota.resx">
+      <DependentUpon>ConexionRemota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\AsistenteInstalacion\ElecccionServidor.resx">
       <DependentUpon>ElecccionServidor.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +225,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Soft_Attendance.manifest">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\ConnectionString.xml" />
@@ -238,6 +250,8 @@
     <Content Include="bin\Debug\System.Runtime.xml" />
     <Content Include="bin\Debug\System.Threading.Tasks.dll" />
     <Content Include="bin\Debug\System.Threading.Tasks.xml" />
+    <Content Include="Logo_SoftAttendance.ico" />
+    <Content Include="Logo_SoftAttendance1.ico" />
     <Content Include="obj\Debug\SoftAttendanceProject.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\SoftAttendanceProject.exe" />
     <Content Include="obj\Debug\SoftAttendanceProject.pdb" />
