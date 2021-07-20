@@ -56,6 +56,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.PanelRegistros = new System.Windows.Forms.Panel();
             this.dataListadoCargos = new System.Windows.Forms.DataGridView();
+            this.EditarC = new System.Windows.Forms.DataGridViewImageColumn();
             this.PanelCargos = new System.Windows.Forms.Panel();
             this.btnVolverCargos = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -95,7 +96,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.EditarC = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -456,6 +456,16 @@
             this.dataListadoCargos.TabIndex = 13;
             this.dataListadoCargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoCargos_CellClick);
             this.dataListadoCargos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoCargos_CellContentClick);
+            // 
+            // EditarC
+            // 
+            this.EditarC.HeaderText = "";
+            this.EditarC.Image = global::SoftAttendanceProject.Properties.Resources.pencil;
+            this.EditarC.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.EditarC.MinimumWidth = 6;
+            this.EditarC.Name = "EditarC";
+            this.EditarC.ReadOnly = true;
+            this.EditarC.Width = 125;
             // 
             // PanelCargos
             // 
@@ -897,7 +907,7 @@
             // Eliminar
             // 
             this.Eliminar.HeaderText = "";
-            this.Eliminar.Image = global::SoftAttendanceProject.Properties.Resources.pencil;
+            this.Eliminar.Image = global::SoftAttendanceProject.Properties.Resources.X;
             this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
@@ -907,22 +917,12 @@
             // Editar
             // 
             this.Editar.HeaderText = "";
-            this.Editar.Image = global::SoftAttendanceProject.Properties.Resources.X;
+            this.Editar.Image = global::SoftAttendanceProject.Properties.Resources.pencil;
             this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Editar.MinimumWidth = 6;
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
             this.Editar.Width = 125;
-            // 
-            // EditarC
-            // 
-            this.EditarC.HeaderText = "";
-            this.EditarC.Image = global::SoftAttendanceProject.Properties.Resources.pencil;
-            this.EditarC.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.EditarC.MinimumWidth = 6;
-            this.EditarC.Name = "EditarC";
-            this.EditarC.ReadOnly = true;
-            this.EditarC.Width = 125;
             // 
             // Personal
             // 
@@ -1015,8 +1015,8 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn5;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewImageColumn EditarC;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
-        private System.Windows.Forms.DataGridViewImageColumn EditarC;
     }
 }

@@ -25,7 +25,7 @@ namespace SoftAttendanceProject.Presentacion.AsistenteInstalacion
 
         private void btnconectar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtIp.Text))
+            if (!string.IsNullOrEmpty(txtIp.Text))
             {
                 conectar_manualmente();
             }
